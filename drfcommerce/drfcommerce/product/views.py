@@ -25,7 +25,7 @@ class BrandViewSet(viewsets.ViewSet):
 
     queryset = Brand.objects.all()
 
-    @extend_schema(responses=ProductSerializer)
+    @extend_schema(responses=BrandSeriliazer)
     def list(self, request):
         serializer = BrandSeriliazer(self.queryset, many=True)
         return Response(serializer.data)
