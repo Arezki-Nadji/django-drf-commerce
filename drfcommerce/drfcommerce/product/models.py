@@ -4,9 +4,7 @@ from mptt.models import MPTTModel, TreeForeignKey
 
 class Category(MPTTModel):
     name = models.CharField(max_length=100)
-    parent = TreeForeignKey(
-        "self", on_delete=models.PROTECT, null=True, blank=True
-    )
+    parent = TreeForeignKey("self", on_delete=models.PROTECT, null=True, blank=True)
 
     class MPTTModel:
         order_insertion_by = ["name"]
@@ -27,7 +25,7 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     is_digital = models.BooleanField(default=False)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
-    Category = TreeForeignKey(
+    category = TreeForeignKey(
         "Category",
         on_delete=models.SET_NULL,
         null=True,

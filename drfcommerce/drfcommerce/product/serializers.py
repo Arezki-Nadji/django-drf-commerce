@@ -16,6 +16,9 @@ class BrandSeriliazer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    brand = BrandSeriliazer()
+    category = CategorySerializer()
+
     class Meta:
         model = Product
         fields = "__all__"
