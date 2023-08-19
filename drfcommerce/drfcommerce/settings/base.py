@@ -91,4 +91,5 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "Django DRF Ecommerce",
+    "VERSION": "1.0.2",
 }

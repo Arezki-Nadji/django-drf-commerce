@@ -27,6 +27,7 @@ platformdirs==3.10.0
 pluggy==1.2.0
 pycodestyle==2.9.1
 pyflakes==2.5.0
+Pygments==2.15.1
 pyrsistent==0.19.3
 pytest==7.4.0
 pytest-cov==4.1.0
